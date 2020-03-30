@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap = "vendor/autoload.php"
+    backupGlobals               = "false"
+    backupStaticAttributes      = "false"
+    colors                      = "true"
+    convertErrorsToExceptions   = "true"
+    convertNoticesToExceptions  = "true"
+    convertWarningsToExceptions = "true"
+    processIsolation            = "false"
+    stopOnFailure               = "false"
+    syntaxCheck                 = "false">
+
+    <testsuites>
+        <testsuite name="Project Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="SPOTIFY_CLIENT_ID" value="243244a2b06f4f039041c58d797487f6"/>
+        <env name="SPOTIFY_CLIENT_SECRET" value="1551f23f7fd647ecaa3e95de23514596"/>
+    </php>
+
+</phpunit>

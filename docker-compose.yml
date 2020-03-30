@@ -1,0 +1,25 @@
+version: '3'
+services:
+  php-rest-spotify-nginx-container:
+    image: nginx:latest
+    container_name: php-rest-spotify-nginx-container
+    ports:
+     - "8008:80"
+    volumes:
+     - ./:/var/www/html
+     - ./docker/nginx/conf.d:/etc/nginx/conf.d
+    networks:
+     - testingnetwork
+  php-rest-spotify-php-container:
+    build: ./docker/php
+    container_name: php-rest-spotify-php-container
+    volumes:
+     - ./:/var/www/html
+    networks:
+     - testingnetwork
+networks:
+  testingnetwork:
+    driver: "bridge"
+volumes:
+  data:
+    driver: "local"
