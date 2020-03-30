@@ -19,7 +19,7 @@ php:
 install:
 	docker exec -it php-rest-spotify-php-container composer install
    
-test:
+tests:
 	docker exec -it php-rest-spotify-php-container /var/www/html/vendor/bin/phpunit test/
    
 unittest:

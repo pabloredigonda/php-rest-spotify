@@ -9,7 +9,7 @@ A Make File is provided for convenienve:
  - **make up** - creates and set up the containers
  - **make down** - stop containers
  - **make install** - install composer dependencies
- - **make test** - run tests (all)
+ - **make tests** - run tests (all)
  - **make unittest** - run tests (unit)
  - **make e2etest** - run tests (end to end)
 
